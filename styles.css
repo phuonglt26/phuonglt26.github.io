@@ -48,11 +48,12 @@ body::after {
 
 body::before {
   background:
-    linear-gradient(180deg, rgba(7, 10, 22, 0.65), rgba(7, 10, 22, 0.95)),
-    url("profile.jpg") center top / cover no-repeat;
-  opacity: 0.28;
-  filter: saturate(1.15) blur(18px);
-  transform: scale(1.08);
+    radial-gradient(circle at 18% 20%, rgba(255, 205, 134, 0.12), transparent 22%),
+    radial-gradient(circle at 76% 14%, rgba(133, 119, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(7, 10, 22, 0.24), rgba(7, 10, 22, 0.62));
+  opacity: 1;
+  filter: blur(28px);
+  transform: scale(1.04);
 }
 
 body::after {
