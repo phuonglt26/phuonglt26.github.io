@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi-Phuong Le | About</title>
+    <meta
+      name="description"
+      content="About page for Thi-Phuong Le, PhD Student in Computer Science (Artificial Intelligence) at Singapore Management University."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="about">
+    <div class="page-shell">
+      <main class="reference-board" id="top">
+        <header class="topbar reveal">
+          <a class="brand" href="index.html" aria-label="Thi-Phuong Le home">
+            <span class="avatar avatar--portrait" aria-hidden="true">
+              <img class="avatar-photo" src="profile_image.svg" alt="" />
+            </span>
+
+            <span class="brand-copy">
+              <span class="brand-name">Thi-Phuong Le</span>
+              <span class="brand-role">PhD Student in Computer Science</span>
+            </span>
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2.5v2.3M12 19.2v2.3M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.2 14.1A8.4 8.4 0 1 1 9.9 3.8a6.9 6.9 0 1 0 10.3 10.3z"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="news.html" data-page="news">News</a>
+            <a href="publications.html" data-page="publications">Publications</a>
+            <a href="teaching.html" data-page="teaching">Teaching</a>
+            <a href="award.html" data-page="award">Award</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+          </nav>
+        </header>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <div class="board-layout">
+          <aside class="sidebar reveal">
+            <section class="sidebar-block">
+              <h2>About Me</h2>
+              <p>
+                I am a PhD student in Computer Science at Singapore Management
+                University and part of
+                <a
+                  class="inline-link"
+                  href="https://preferred.ai/people"
+                  target="_blank"
+                  rel="noreferrer"
+                >Preferred.AI</a>.
+                My research focuses on explainable and trustworthy AI for
+                recommendation systems, with a growing interest in model
+                attribution, LLM-based recommendation, and comparative opinion
+                mining.
+              </p>
+            </section>
+
+            <section class="sidebar-block sidebar-block--compact">
+              <h2>Research Focus</h2>
+              <ul class="sidebar-list">
+                <li>Explainable and trustworthy AI for recommendation systems</li>
+                <li>Model attribution and interpretable learning signals</li>
+                <li>Comparative opinion mining and LLM-based recommendation</li>
+              </ul>
+            </section>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark quote-mark--open">“</span>
+              <p>
+                I want to build AI systems that are not only accurate, but also
+                reliable, interpretable, and grounded in meaningful reasoning.
+              </p>
+              <footer>Research statement</footer>
+            </blockquote>
+
+            <div class="fact-grid">
+              <div class="fact-card">
+                <span>University</span>
+                <strong>Singapore Management University</strong>
+              </div>
+              <div class="fact-card">
+                <span>Group</span>
+                <strong>Preferred.AI</strong>
+              </div>
+              <div class="fact-card">
+                <span>Focus</span>
+                <strong>Explainable and Trustworthy AI</strong>
+              </div>
+              <div class="fact-card">
+                <span>Location</span>
+                <strong>Singapore</strong>
+              </div>
+            </div>
+          </aside>
+
+          <section class="content-column">
+            <section class="content-group reveal about-page-section">
+              <div class="group-heading">
+                <div>
+                  <h2>About</h2>
+                  <p class="group-copy">
+                    A concise overview of my academic profile, research
+                    direction, and current PhD journey.
+                  </p>
+                </div>
+                <span class="status-pill">About page</span>
+              </div>
+
+              <div class="about-page-stack">
+                <article class="home-panel about-panel about-panel--overview">
+                  <h3>Profile Overview</h3>
+                  <p>
+                    I am a PhD student in Computer Science at Singapore
+                    Management University, working on explainable and
+                    trustworthy AI for recommendation systems. My recent work
+                    focuses on model attribution, comparative opinion mining,
+                    and language-based reasoning for reliable AI systems. My
+                    journey began with hands-on software and data work, then
+                    developed through teaching and research, eventually leading
+                    to my current path as an AI Researcher and PhD student.
+                  </p>
+                  <div class="about-subsection">
+                    <h4>Research Interests</h4>
+                    <div class="home-chip-list">
+                      <span class="home-chip">Explainable AI</span>
+                      <span class="home-chip">Trustworthy AI</span>
+                      <span class="home-chip">Recommendation Systems</span>
+                      <span class="home-chip">LLM-based Recommendation</span>
+                      <span class="home-chip">Comparative Opinion Mining</span>
+                    </div>
+                  </div>
+                  <div class="about-statement">
+                    <h4>Research Statement</h4>
+                    <p>
+                      I aim to build AI systems that are not only accurate, but
+                      also reliable, interpretable, and grounded in meaningful
+                      reasoning.
+                    </p>
+                  </div>
+                  <ul class="home-panel-list about-list">
+                    <li>
+                      <strong>Research direction:</strong> explainability,
+                      trustworthiness, and opinion mining for recommendation
+                      systems.
+                    </li>
+                    <li>
+                      <strong>2020-2023:</strong> experience across software
+                      development, data science, and teaching support.
+                    </li>
+                    <li>
+                      <strong>2023-Present:</strong> AI Researcher and PhD in
+                      Computer Science at Singapore Management University.
+                    </li>
+                    <li>
+                      <strong>Research environment:</strong> School of
+                      Computing and Information Systems, with ties to
+                      <a
+                        class="inline-link"
+                        href="https://preferred.ai/people"
+                        target="_blank"
+                        rel="noreferrer"
+                      >Preferred.AI</a>.
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

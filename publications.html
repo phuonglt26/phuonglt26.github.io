@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi-Phuong Le | Publications</title>
+    <meta
+      name="description"
+      content="Publications page for Thi-Phuong Le, PhD Student in Computer Science (Artificial Intelligence) at Singapore Management University."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="publications">
+    <div class="page-shell">
+      <main class="reference-board" id="top">
+        <header class="topbar reveal">
+          <a class="brand" href="index.html" aria-label="Thi-Phuong Le home">
+            <span class="avatar avatar--portrait" aria-hidden="true">
+              <img class="avatar-photo" src="profile_image.svg" alt="" />
+            </span>
+
+            <span class="brand-copy">
+              <span class="brand-name">Thi-Phuong Le</span>
+              <span class="brand-role">PhD Student in Computer Science</span>
+            </span>
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2.5v2.3M12 19.2v2.3M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.2 14.1A8.4 8.4 0 1 1 9.9 3.8a6.9 6.9 0 1 0 10.3 10.3z"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="news.html" data-page="news">News</a>
+            <a href="publications.html" data-page="publications">Publications</a>
+            <a href="teaching.html" data-page="teaching">Teaching</a>
+            <a href="award.html" data-page="award">Award</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+          </nav>
+        </header>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <div class="board-layout">
+          <aside class="sidebar reveal">
+            <section class="sidebar-block">
+              <h2>Publication Notes</h2>
+              <p>
+                This page highlights selected papers and research outputs related to
+                recommendation systems, explainable AI, and opinion mining.
+              </p>
+            </section>
+
+            <section class="sidebar-block sidebar-block--compact">
+              <h2>Topics</h2>
+              <ul class="sidebar-list">
+                <li>Explainable and trustworthy AI for recommendation systems</li>
+                <li>Model attribution and LLM-based recommendation</li>
+                <li>Comparative opinion mining and aspect-level reasoning</li>
+              </ul>
+            </section>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark quote-mark--open">“</span>
+              <p>
+                I aim to publish work that is technically grounded, interpretable,
+                and useful for trustworthy AI research.
+              </p>
+              <footer>Publication goal</footer>
+            </blockquote>
+
+            <div class="fact-grid">
+              <div class="fact-card">
+                <span>Formats</span>
+                <strong>Papers, posters, talks</strong>
+              </div>
+              <div class="fact-card">
+                <span>Status</span>
+                <strong>Selected + in progress</strong>
+              </div>
+              <div class="fact-card">
+                <span>Style</span>
+                <strong>Clear and evidence-driven</strong>
+              </div>
+              <div class="fact-card">
+                <span>Goal</span>
+                <strong>Growing publication profile</strong>
+              </div>
+            </div>
+          </aside>
+
+          <section class="content-column">
+            <section class="content-group reveal publication-page-section">
+              <div class="group-heading">
+                <div>
+                  <h2>Publications</h2>
+                  <p class="group-copy">
+                    My research has grown from sentiment analysis to comparative opinion mining, explainable
+                    and trustworthy AI and
+                    recommendation systems.
+                  </p>
+                </div>
+                <span class="status-pill">Publications page</span>
+              </div>
+
+              <div class="publication-page-stack">
+                <article class="home-panel publication-panel publication-panel--featured">
+                  <!-- <div class="home-panel-head">
+                    <div class="publication-head-copy">
+                      <h3>Selected Publications</h3>
+                      <p class="publication-head-note">
+                        Selected research outputs with publication type shown on
+                        each entry.
+                      </p>
+                    </div>
+                  </div> -->
+
+                  <div class="news-scroll-wrap" data-scroll-fade-wrap>
+                    <div class="publication-list publication-list--scroll" data-scroll-fade-list>
+                    <article class="publication-item">
+                      <div class="publication-item-head">
+                        <div class="publication-item-tags">
+                          <span class="publication-type publication-type--journal">Journal</span>
+                          <span class="publication-year">2026</span>
+                        </div>
+                      </div>
+                      <h4>Consistent Attributions for Transformer-Based Reversible Comparison Classifiers</h4>
+                      <p class="publication-authors">
+                        Thi-Phuong Le and Hady W. Lauw
+                      </p>
+                      <p class="publication-meta">
+                        <strong><em>Data Mining and Knowledge Discovery (DAMI),
+                        ECML PKDD 2026 Journal Track</em></strong>.
+                      </p>
+                      <p class="publication-note">
+                        A paper connected to my recent research
+                        direction in explainable and trustworthy AI.
+                      </p>
+                    </article>
+
+                    <article class="publication-item">
+                      <div class="publication-item-head">
+                        <div class="publication-item-tags">
+                          <span class="publication-type publication-type--conference">Conference</span>
+                          <span class="publication-year">2021</span>
+                        </div>
+                        <a
+                          class="publication-action"
+                          href="https://dblp.org/rec/conf/kse/Le-MinhLTBLCTT21"
+                          target="_blank"
+                          rel="noreferrer"
+                        >DBLP</a>
+                      </div>
+                      <h4>Aspect-Based Sentiment Analysis Using Mini-Window Locating Attention for Vietnamese E-commerce Reviews</h4>
+                      <p class="publication-authors">
+                        Binh Le-Minh, Thi-Phuong Le, Khanh-Hung Tran,
+                        Khanh-Huyen Bui, Hoang-Quynh Le, Duy-Cat Can, Hung
+                        Nguyen Chung Thanh, Mai-Vu Tran
+                      </p>
+                      <p class="publication-meta">
+                        <strong><em>13th IEEE International Conference on Knowledge and
+                        Systems Engineering (KSE 2021)</em></strong>.
+                      </p>
+                      <p class="publication-note">
+                        Co-authored conference paper on Vietnamese e-commerce review
+                        analysis.
+                      </p>
+                    </article>
+                    <article class="publication-item">
+                      <div class="publication-item-head">
+                        <div class="publication-item-tags">
+                          <span class="publication-type publication-type--preprint">Preprint</span>
+                          <span class="publication-year">2026</span>
+                        </div>
+                        <a
+                          class="publication-action"
+                          href="https://arxiv.org/abs/2603.01212"
+                          target="_blank"
+                          rel="noreferrer"
+                        >arXiv</a>
+                      </div>
+                      <h4>XAI-enhanced Comparative Opinion Mining via Aspect-based Scoring and Semantic Reasoning</h4>
+                      <p class="publication-authors">
+                        Ngoc-Quang Le, T. Thanh-Lam Nguyen, Quoc-Trung Phu,
+                        Thi-Phuong Le, Duy-Cat Can, Hoang-Quynh Le
+                      </p>
+                      <p class="publication-meta">
+                        arXiv preprint, March 2026.
+                      </p>
+                    </article>
+
+                    <article class="publication-item">
+                      <div class="publication-item-head">
+                        <div class="publication-item-tags">
+                          <span class="publication-type publication-type--preprint">Preprint</span>
+                          <span class="publication-year">2026</span>
+                        </div>
+                        <a
+                          class="publication-action"
+                          href="https://arxiv.org/abs/2601.13575"
+                          target="_blank"
+                          rel="noreferrer"
+                        >arXiv</a>
+                      </div>
+                      <h4>Comparing Without Saying: A Dataset and Benchmark for Implicit Comparative Opinion Mining from Same-User Reviews</h4>
+                      <p class="publication-authors">
+                        Thanh-Lam T. Nguyen, Ngoc-Quang Le, Quoc-Trung Phu,
+                        Thi-Phuong Le, Ngoc-Huyen Pham, Phuong-Nguyen Nguyen,
+                        Hoang-Quynh Le
+                      </p>
+                      <p class="publication-meta">
+                        arXiv preprint, January 2026.
+                      </p>
+                    </article>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi-Phuong Le | News</title>
+    <meta
+      name="description"
+      content="News page for Thi-Phuong Le, PhD Student in Computer Science (Artificial Intelligence) at Singapore Management University."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="news">
+    <div class="page-shell">
+      <main class="reference-board" id="top">
+        <header class="topbar reveal">
+          <a class="brand" href="index.html" aria-label="Thi-Phuong Le home">
+            <span class="avatar avatar--portrait" aria-hidden="true">
+              <img class="avatar-photo" src="profile_image.svg" alt="" />
+            </span>
+
+            <span class="brand-copy">
+              <span class="brand-name">Thi-Phuong Le</span>
+              <span class="brand-role">PhD Student in Computer Science</span>
+            </span>
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2.5v2.3M12 19.2v2.3M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.2 14.1A8.4 8.4 0 1 1 9.9 3.8a6.9 6.9 0 1 0 10.3 10.3z"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="news.html" data-page="news">News</a>
+            <a href="publications.html" data-page="publications">Publications</a>
+            <a href="teaching.html" data-page="teaching">Teaching</a>
+            <a href="award.html" data-page="award">Award</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+          </nav>
+        </header>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <div class="board-layout">
+          <aside class="sidebar reveal">
+            <section class="sidebar-block">
+              <h2>News</h2>
+              <p>
+                This page collects recent papers, research milestones, and ongoing
+                academic updates related to my PhD work.
+              </p>
+            </section>
+
+            <section class="sidebar-block sidebar-block--compact">
+              <h2>What To Post</h2>
+              <ul class="sidebar-list">
+                <li>New papers, preprints, and submission milestones</li>
+                <li>Research talks, seminars, and academic updates</li>
+                <li>Progress in recommendation systems and opinion mining research</li>
+              </ul>
+            </section>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark quote-mark--open">“</span>
+              <p>
+                A news page makes ongoing research visible even while papers and
+                larger projects are still evolving.
+              </p>
+              <footer>Why news matters</footer>
+            </blockquote>
+
+            <div class="fact-grid">
+              <div class="fact-card">
+                <span>Use</span>
+                <strong>Recent updates</strong>
+              </div>
+              <div class="fact-card">
+                <span>Format</span>
+                <strong>Short date-based notes</strong>
+              </div>
+              <div class="fact-card">
+                <span>Audience</span>
+                <strong>Collaborators and visitors</strong>
+              </div>
+              <div class="fact-card">
+                <span>Benefit</span>
+                <strong>Shows active momentum</strong>
+              </div>
+            </div>
+          </aside>
+
+          <section class="content-column">
+            <section class="content-group reveal news-page-section">
+              <div class="group-heading">
+                <div>
+                  <h2>News</h2>
+                  <p class="group-copy">
+                    A complete view of my recent research updates, academic
+                    activities, and awards.
+                  </p>
+                </div>
+                <span class="status-pill">News page</span>
+              </div>
+
+              <div class="news-page-stack">
+                <article class="home-panel news-page-panel news-page-panel--all" data-news-filter-group>
+                  <div class="home-panel-head">
+                    <div class="news-page-head-copy">
+                      <h3>All News</h3>
+                      <p>
+                        The complete timeline of research, activity, and award
+                        updates.
+                      </p>
+                    </div>
+                    <div class="news-filter-bar" role="group" aria-label="Filter all news">
+                      <button
+                        class="news-filter-button is-active"
+                        type="button"
+                        data-news-filter="all"
+                        aria-pressed="true"
+                      >
+                        All
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="research"
+                        aria-pressed="false"
+                      >
+                        Research
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="activity"
+                        aria-pressed="false"
+                      >
+                        Activity
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="award"
+                        aria-pressed="false"
+                      >
+                        Award
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="news-scroll-wrap" data-scroll-fade-wrap>
+                    <ul class="home-panel-list home-panel-list--scroll news-page-list news-page-list--timeline" data-scroll-fade-list>
+                      <li data-news-item-tag="research">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--research">Research</span>
+                            <span class="news-item-copy">
+                              Paper accepted at
+                              <em>Data Mining and Knowledge Discovery (DAMI)</em>,
+                              ECML PKDD 2026 Journal Track.
+                            </span>
+                          </span>
+                          <span class="news-date">Mar 2026</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              Officially became a PhD candidate.
+                            </span>
+                          </span>
+                          <span class="news-date">Apr 2025</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              Volunteered at the International World Wide Web
+                              Conference 2024 (WWW 2024) in Singapore.
+                            </span>
+                          </span>
+                          <span class="news-date">May 2024</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              Started my PhD in Computer Science at Singapore
+                              Management University.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Vingroup Young Talent Scholarship for the
+                              PhD program at Singapore Management University.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Consolation Prize in WIDS Datathon 2023,
+                              Women in Data Science Hanoi.
+                            </span>
+                          </span>
+                          <span class="news-date">Jun 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Annual Scholarship for outstanding students
+                              at Vietnam National University, Hanoi.
+                            </span>
+                          </span>
+                          <span class="news-date">Dec 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="research">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--research">Research</span>
+                            <span class="news-item-copy">
+                              Paper accepted at
+                              <em>The 13th IEEE International Conference on Knowledge
+                              and Systems Engineering (KSE 2021)</em>.
+                            </span>
+                          </span>
+                          <span class="news-date">Sep 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Won Third prize in the SheCodes Virtual Hackathon,
+                              SheCodes Vietnam.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Won Second prize in the Scientific Research Conference
+                              for Undergraduates, FIT, UET-VNU.
+                            </span>
+                          </span>
+                          <span class="news-date">Jan 2020</span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi-Phuong Le | Research</title>
+    <meta
+      name="description"
+      content="Research page for Thi-Phuong Le, PhD Student in Computer Science (Artificial Intelligence) at Singapore Management University."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body data-page="research">
+    <div class="page-shell">
+      <main class="reference-board" id="top">
+        <header class="topbar reveal">
+          <a class="brand" href="index.html" aria-label="Thi-Phuong Le home">
+            <span class="avatar avatar--portrait" aria-hidden="true">
+              <img class="avatar-photo" src="profile_image.svg" alt="" />
+            </span>
+
+            <span class="brand-copy">
+              <span class="brand-name">Thi-Phuong Le</span>
+              <span class="brand-role">PhD Student in Computer Science</span>
+            </span>
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2.5v2.3M12 19.2v2.3M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.2 14.1A8.4 8.4 0 1 1 9.9 3.8a6.9 6.9 0 1 0 10.3 10.3z"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="news.html" data-page="news">News</a>
+            <a href="publications.html" data-page="publications">Publications</a>
+            <a href="teaching.html" data-page="teaching">Teaching</a>
+            <a href="award.html" data-page="award">Award</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+          </nav>
+        </header>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <div class="board-layout">
+          <aside class="sidebar reveal">
+            <section class="sidebar-block">
+              <h2>About Me</h2>
+              <p>
+                I work on trustworthy and human-centered AI systems, with a particular
+                interest in how these systems can support academic work responsibly.
+              </p>
+            </section>
+
+            <section class="sidebar-block sidebar-block--compact">
+              <h2>Research Focus</h2>
+              <ul class="sidebar-list">
+                <li>Reliability and transparency in LLM-assisted workflows</li>
+                <li>Human-centered evaluation of research support systems</li>
+                <li>Design of practical tools for writing and synthesis</li>
+              </ul>
+            </section>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark quote-mark--open">“</span>
+              <p>
+                Good research tools should be fast and helpful, but they also need to be
+                inspectable, explainable, and honest about their limits.
+              </p>
+              <footer>Research perspective</footer>
+            </blockquote>
+
+            <div class="fact-grid">
+              <div class="fact-card">
+                <span>Main Area</span>
+                <strong>Trustworthy AI</strong>
+              </div>
+              <div class="fact-card">
+                <span>Methods</span>
+                <strong>Design, prototyping, evaluation</strong>
+              </div>
+              <div class="fact-card">
+                <span>Context</span>
+                <strong>Academic workflows</strong>
+              </div>
+              <div class="fact-card">
+                <span>Interest</span>
+                <strong>Cross-disciplinary collaboration</strong>
+              </div>
+            </div>
+          </aside>
+
+          <section class="content-column">
+            <section class="content-group reveal">
+              <div class="group-heading">
+                <div>
+                  <h2>Research</h2>
+                  <p class="group-copy">
+                    My research agenda centers on building AI systems that help people
+                    work better while preserving transparency, control, and trust.
+                  </p>
+                </div>
+                <span class="status-pill">Research page</span>
+              </div>
+
+              <div class="portfolio-grid">
+                <article class="portfolio-card reveal">
+                  <div class="card-visual card-visual--research" aria-hidden="true"></div>
+
+                  <div class="card-copy">
+                    <p class="eyebrow">Themes</p>
+                    <h3>Core Research Themes</h3>
+                    <p>
+                      I am especially interested in how intelligent systems can support
+                      academic tasks without becoming opaque or difficult to verify.
+                    </p>
+                    <ul class="detail-list">
+                      <li>
+                        <strong>Trustworthy AI:</strong> reliability, calibration, and
+                        appropriate uncertainty.
+                      </li>
+                      <li>
+                        <strong>Human-centered systems:</strong> interfaces and workflows
+                        that respect user judgment.
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="portfolio-card reveal">
+                  <div class="card-visual card-visual--projects" aria-hidden="true"></div>
+
+                  <div class="card-copy">
+                    <p class="eyebrow">Questions</p>
+                    <h3>Current Questions</h3>
+                    <p>
+                      I am exploring how people can effectively collaborate with AI during
+                      writing, synthesis, and evidence-based decision-making.
+                    </p>
+                    <ul class="detail-list">
+                      <li>
+                        <strong>Inspection:</strong> how should users inspect generated
+                        outputs and intermediate reasoning?
+                      </li>
+                      <li>
+                        <strong>Control:</strong> when should AI assist, defer, or request
+                        clarification?
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <div class="lower-grid">
+              <section class="content-group reveal">
+                <h2>Methods &amp; Evaluation</h2>
+
+                <article class="portfolio-card portfolio-card--mini">
+                  <div class="card-visual card-visual--publications" aria-hidden="true"></div>
+
+                  <div class="card-copy card-copy--mini">
+                    <p class="eyebrow">Methods</p>
+                    <h3>How I Study Systems</h3>
+                    <p>
+                      My research typically combines system design, benchmark-driven
+                      experiments, and human-centered evaluation.
+                    </p>
+                    <ul class="detail-list detail-list--compact">
+                      <li>Prototype design and iterative refinement</li>
+                      <li>Task-based benchmarking and error analysis</li>
+                      <li>User studies and workflow observation</li>
+                    </ul>
+                  </div>
+                </article>
+              </section>
+
+              <section class="content-group reveal">
+                <h2>Collaboration Areas</h2>
+
+                <article class="portfolio-card portfolio-card--mini">
+                  <div class="card-visual card-visual--contact" aria-hidden="true"></div>
+
+                  <div class="card-copy card-copy--mini">
+                    <p class="eyebrow">Open To</p>
+                    <h3>Research Collaboration</h3>
+                    <p>
+                      I am interested in projects where strong system design can meet real
+                      domain needs in education, science, or knowledge work.
+                    </p>
+                    <ul class="detail-list detail-list--compact">
+                      <li>Interdisciplinary collaboration with domain experts</li>
+                      <li>Evaluation design for applied AI systems</li>
+                      <li>Academic writing and research workflow tools</li>
+                    </ul>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

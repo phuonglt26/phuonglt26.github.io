@@ -1,301 +1,561 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phuong Le | Personal Website</title>
+    <title>Thi-Phuong Le | Home</title>
     <meta
       name="description"
-      content="Trang web cá nhân phong cách dark luxury dành cho portfolio, thương hiệu cá nhân và các dự án nổi bật."
+      content="Home page for Thi-Phuong Le, PhD Student in Computer Science (Artificial Intelligence) at Singapore Management University."
     />
     <script>
       document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("site-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
-  <body>
+  <body data-page="home">
     <div class="page-shell">
-      <header class="site-header glass reveal">
-        <a class="brand" href="#top" aria-label="Trang chủ">
-          <span class="brand-mark">PL</span>
-          <span class="brand-copy">
-            <strong>Phuong Le</strong>
-            <small>Personal Brand • Portfolio</small>
-          </span>
-        </a>
+      <main class="reference-board" id="top">
+        <header class="topbar reveal">
+          <a class="brand" href="index.html" aria-label="Thi-Phuong Le home">
+            <span class="avatar avatar--portrait" aria-hidden="true">
+              <img class="avatar-photo" src="profile_image.svg" alt="" />
+            </span>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Mở menu điều hướng"
-        >
-          <span></span>
-          <span></span>
-        </button>
+            <span class="brand-copy">
+              <span class="brand-name">Thi-Phuong Le</span>
+              <span class="brand-role">PhD Student in Computer Science</span>
+            </span>
+          </a>
 
-        <nav class="site-nav" id="site-nav">
-          <a href="#gioi-thieu">Giới thiệu</a>
-          <a href="#dich-vu">Dịch vụ</a>
-          <a href="#du-an">Dự án</a>
-          <a href="#hanh-trinh">Hành trình</a>
-          <a href="#lien-he">Liên hệ</a>
-        </nav>
-      </header>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch color theme"
+            title="Toggle color theme"
+          >
+            <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2.5v2.3M12 19.2v2.3M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20.2 14.1A8.4 8.4 0 1 1 9.9 3.8a6.9 6.9 0 1 0 10.3 10.3z"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-label">Dark</span>
+          </button>
 
-      <main id="top">
-        <section class="hero section" id="gioi-thieu">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Build your authority with a sharper digital presence</p>
-            <h1>Trang web cá nhân sang trọng, rõ nét và có chiều sâu thương hiệu.</h1>
-            <p class="lead">
-              Mẫu giao diện này lấy cảm hứng từ bố cục editorial và dashboard cao cấp:
-              tiêu đề nổi bật, hồ sơ cá nhân rõ ràng, khu dự án chỉn chu và trải nghiệm
-              gọn gàng trên cả desktop lẫn mobile.
-            </p>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
 
-            <div class="cta-row">
-              <a class="button button-primary" href="#du-an">Xem dự án nổi bật</a>
-              <a class="button button-secondary" href="#lien-he">Liên hệ hợp tác</a>
+          <nav class="site-nav" id="site-nav">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="news.html" data-page="news">News</a>
+            <a href="publications.html" data-page="publications">Publications</a>
+            <a href="teaching.html" data-page="teaching">Teaching</a>
+            <a href="award.html" data-page="award">Award</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+          </nav>
+        </header>
+
+        <div class="accent-line" aria-hidden="true"></div>
+
+        <div class="board-layout">
+          <aside class="sidebar reveal">
+            <section class="sidebar-block">
+              <h2>About Me</h2>
+              <p>
+                I am a PhD student in Computer Science at Singapore Management
+                University and a member of
+                <a
+                  class="inline-link"
+                  href="https://preferred.ai/people"
+                  target="_blank"
+                  rel="noreferrer"
+                >Preferred.AI</a>.
+                My research focuses on explainable and trustworthy AI for
+                recommendation systems, with interests in model attribution,
+                large language models, and comparative opinion mining.
+              </p>
+            </section>
+
+            <section class="sidebar-block sidebar-block--compact">
+              <h2>Research Interests</h2>
+              <ul class="sidebar-list">
+                <li>Trustworthy and Explainable AI (XAI)</li>
+                <li>Recommendation systems (Recsys)</li>
+                <li>Large Language Models (LLMs)</li>
+                <li>Comparative Opinion Mining, Opinion Mining (OM)</li>
+              </ul>
+            </section>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark quote-mark--open">“</span>
+              <p>
+                <em>Building AI systems that are not only accurate, but also reliable,
+                interpretable, and grounded in meaningful reasoning.</em>
+              </p>
+              <footer>Research statement</footer>
+            </blockquote>
+
+            <div class="social-grid" aria-label="Professional links">
+                <a
+                  class="social-link"
+                  href="https://github.com/phuonglt26"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open GitHub profile"
+                >
+                  <span class="social-icon social-icon--github" aria-hidden="true">
+                    <svg viewBox="0 0 98 96" role="img" focusable="false">
+                      <path d="M41.4395 69.3848C28.8066 67.8535 19.9062 58.7617 19.9062 46.9902C19.9062 42.2051 21.6289 37.0371 24.5 33.5918C23.2559 30.4336 23.4473 23.7344 24.8828 20.959C28.7109 20.4805 33.8789 22.4902 36.9414 25.2656C40.5781 24.1172 44.4062 23.543 49.0957 23.543C53.7852 23.543 57.6133 24.1172 61.0586 25.1699C64.0254 22.4902 69.2891 20.4805 73.1172 20.959C74.457 23.543 74.6484 30.2422 73.4043 33.4961C76.4668 37.1328 78.0937 42.0137 78.0937 46.9902C78.0937 58.7617 69.1934 67.6621 56.3691 69.2891C59.623 71.3945 61.8242 75.9883 61.8242 81.252L61.8242 91.2051C61.8242 94.0762 64.2168 95.7031 67.0879 94.5547C84.4102 87.9512 98 70.6289 98 49.1914C98 22.1074 75.9883 0 48.9043 0C21.8203 0 0 22.1074 0 49.1914C0 70.4375 13.4941 88.0469 31.6777 94.6504C34.2617 95.6074 36.75 93.8848 36.75 91.3008L36.75 83.6445C35.4102 84.2188 33.6875 84.6016 32.1562 84.6016C25.8398 84.6016 22.1074 81.1563 19.4277 74.7441C18.375 72.1602 17.2266 70.6289 15.0254 70.3418C13.877 70.2461 13.4941 69.7676 13.4941 69.1934C13.4941 68.0449 15.4082 67.1836 17.3223 67.1836C20.0977 67.1836 22.4902 68.9063 24.9785 72.4473C26.8926 75.2227 28.9023 76.4668 31.2949 76.4668C33.6875 76.4668 35.2187 75.6055 37.4199 73.4043C39.0469 71.7773 40.291 70.3418 41.4395 69.3848Z" />
+                    </svg>
+                  </span>
+                  <span class="social-label">GitHub</span>
+                </a>
+
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/phuonglt26/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open LinkedIn profile"
+                >
+                  <span class="social-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <rect x="4" y="4" width="16" height="16" rx="4" />
+                      <path d="M9 10v6M9 8.25h.01M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16" />
+                    </svg>
+                  </span>
+                  <span class="social-label">LinkedIn</span>
+                </a>
+
+                <a
+                  class="social-link"
+                  href="https://scholar.google.com/citations?user=2zA7124AAAAJ&amp;hl=vi&amp;authuser=1"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open Google Scholar profile"
+                >
+                  <span class="social-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <path d="M3 9 12 4l9 5-9 5-9-5Z" />
+                      <path d="M7 12v4.5c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V12" />
+                    </svg>
+                  </span>
+                  <span class="social-label">Google Scholar</span>
+                </a>
+
+                <a
+                  class="social-link"
+                  href="mailto:tp.le.2023@phd.smu.edu.sg"
+                  aria-label="Send email to tp.le.2023@phd.smu.edu.sg"
+                >
+                  <span class="social-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <rect x="3.5" y="6.5" width="17" height="11" rx="2" />
+                      <path d="m5 8 7 5 7-5" />
+                    </svg>
+                  </span>
+                  <span class="social-label">Email</span>
+                </a>
             </div>
+          </aside>
 
-            <dl class="stats">
-              <div>
-                <dt>09+</dt>
-                <dd>Dự án cá nhân và landing page có thể mở rộng</dd>
-              </div>
-              <div>
-                <dt>04</dt>
-                <dd>Khối nội dung chính để kể câu chuyện thương hiệu</dd>
-              </div>
-              <div>
-                <dt>01</dt>
-                <dd>Ngôn ngữ thị giác thống nhất từ hero đến contact</dd>
-              </div>
-              <div>
-                <dt>100%</dt>
-                <dd>Tối ưu responsive để dùng được trên điện thoại</dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="workspace-frame reveal">
-            <aside class="panel profile-panel">
-              <div class="profile-top">
-                <div class="avatar" aria-hidden="true">PL</div>
+          <section class="content-column">
+            <section class="content-group reveal home-section">
+              <div class="group-heading">
                 <div>
-                  <p class="mini-label">Founder Profile</p>
-                  <h2>Phuong Le</h2>
-                  <p class="profile-role">Developer • Builder • Story-led Designer</p>
+                  <h2>News</h2>
                 </div>
               </div>
 
-              <div class="panel-block">
-                <h3>About Me</h3>
-                <p>
-                  Mình thích xây những trải nghiệm web khiến người xem cảm thấy bạn có
-                  định hướng, có gu và đáng tin ngay từ vài giây đầu tiên.
-                </p>
-              </div>
-
-              <div class="panel-block">
-                <h3>Signature Services</h3>
-                <ul class="service-list">
-                  <li>Thiết kế website cá nhân và portfolio theo phong cách premium</li>
-                  <li>Landing page cho thương hiệu cá nhân, speaker, freelancer</li>
-                  <li>Biến nội dung giới thiệu thành trải nghiệm trực quan và thuyết phục</li>
-                </ul>
-              </div>
-
-              <blockquote class="quote-card">
-                <p>
-                  “Một website tốt không chỉ để giới thiệu bản thân, mà để định vị bạn là
-                  người đáng được nhớ tới.”
-                </p>
-                <footer>Brand Positioning Note</footer>
-              </blockquote>
-
-              <div class="availability">
-                <div>
-                  <span>Base</span>
-                  <strong>Việt Nam / Remote</strong>
-                </div>
-                <div>
-                  <span>Focus</span>
-                  <strong>Portfolio, Bio Site, Landing Page</strong>
-                </div>
-              </div>
-            </aside>
-
-            <section class="panel showcase-panel" id="du-an">
-              <div class="section-heading">
-                <div>
-                  <p class="mini-label">Selected Work</p>
-                  <h2>Portfolio &amp; Case Studies</h2>
-                </div>
-                <span class="status-pill">Open for selected collaborations</span>
-              </div>
-
-              <div class="work-grid">
-                <article class="work-card">
-                  <div class="thumb thumb-strategy"></div>
-                  <span class="work-tag">Personal Brand</span>
-                  <h3>Portfolio chỉn chu cho chuyên gia độc lập</h3>
+              <div class="home-panel-grid home-panel-grid--news">
+                <!-- <article class="home-panel home-panel--upcoming">
+                  <h3>Upcoming</h3>
                   <p>
-                    Tập trung vào ấn tượng đầu tiên, thẩm mỹ tối giản và cấu trúc nội dung
-                    giúp tăng độ tin cậy.
+                    An upcoming academic activity.
                   </p>
-                </article>
+                  <ul class="home-panel-list">
+                    <li>
+                      <span class="news-tag news-tag--activity">Activity</span>
+                      <strong>September 2026:</strong> presenting a paper at
+                      ECML PKDD in Naples, Italy.
+                    </li>
+                  </ul>
+                </article> -->
 
-                <article class="work-card">
-                  <div class="thumb thumb-campaign"></div>
-                  <span class="work-tag">Launch Page</span>
-                  <h3>Trang giới thiệu dịch vụ có khả năng chuyển đổi</h3>
+                <article class="home-panel home-panel--scroll home-panel--wide" data-news-filter-group>
+                  <div class="home-panel-head">
+                    <h3>All News</h3>
+                    <div class="news-filter-bar" role="group" aria-label="Filter all news">
+                      <button
+                        class="news-filter-button is-active"
+                        type="button"
+                        data-news-filter="all"
+                        aria-pressed="true"
+                      >
+                        All
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="research"
+                        aria-pressed="false"
+                      >
+                        Research
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="activity"
+                        aria-pressed="false"
+                      >
+                        Activity
+                      </button>
+                      <button
+                        class="news-filter-button"
+                        type="button"
+                        data-news-filter="award"
+                        aria-pressed="false"
+                      >
+                        Award
+                      </button>
+                    </div>
+                  </div>
                   <p>
-                    Kết hợp storytelling, social proof và CTA rõ ràng để dẫn người xem đến
-                    hành động.
+                    A concise overview of recent papers, milestones, and
+                    activity.
                   </p>
-                </article>
-
-                <article class="work-card">
-                  <div class="thumb thumb-editorial"></div>
-                  <span class="work-tag">Editorial Layout</span>
-                  <h3>Case study phong cách magazine nhưng vẫn dễ theo dõi</h3>
-                  <p>
-                    Lý tưởng cho designer, developer, marketer hoặc creator muốn kể câu
-                    chuyện về cách mình làm việc.
-                  </p>
-                </article>
-
-                <article class="work-card">
-                  <div class="thumb thumb-growth"></div>
-                  <span class="work-tag">Digital Presence</span>
-                  <h3>Hệ giao diện đồng bộ từ hồ sơ đến liên hệ</h3>
-                  <p>
-                    Dùng chung màu sắc, typography và nhịp khoảng trắng để tạo cảm giác
-                    chuyên nghiệp xuyên suốt.
-                  </p>
+                  <div class="news-scroll-wrap" data-scroll-fade-wrap>
+                    <ul class="home-panel-list home-panel-list--scroll" data-scroll-fade-list>
+                      <li data-news-item-tag="research">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--research">Research</span>
+                            <span class="news-item-copy">
+                              Paper accepted at
+                              <em>Data Mining and Knowledge Discovery (DAMI)</em>,
+                              ECML PKDD 2026 Journal Track.
+                            </span>
+                          </span>
+                          <span class="news-date">Mar 2026</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              Officially became a PhD candidate.
+                            </span>
+                          </span>
+                          <span class="news-date">Apr 2025</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              Volunteered at the International World Wide Web
+                              Conference 2024 (WWW 2024) in Singapore.
+                            </span>
+                          </span>
+                          <span class="news-date">May 2024</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="activity">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--activity">Activity</span>
+                            <span class="news-item-copy">
+                              I started my PhD in Computer Science at Singapore
+                              Management University.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="research">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--research">Research</span>
+                            <span class="news-item-copy">
+                              Paper accepted at
+                              <em>The 13th IEEE International Conference on Knowledge
+                              and Systems Engineering (KSE 2021)</em>.
+                            </span>
+                          </span>
+                          <span class="news-date">Sep 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Vingroup Young Talent Scholarship for the
+                              PhD program at Singapore Management University.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Consolation Prize in WIDS Datathon 2023,
+                              Women in Data Science Hanoi.
+                            </span>
+                          </span>
+                          <span class="news-date">Jun 2023</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Received the Annual Scholarship for outstanding students
+                              at Vietnam National University, Hanoi.
+                            </span>
+                          </span>
+                          <span class="news-date">Dec 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Won Third prize in the SheCodes Virtual Hackathon,
+                              SheCodes Vietnam.
+                            </span>
+                          </span>
+                          <span class="news-date">Aug 2021</span>
+                        </span>
+                      </li>
+                      <li data-news-item-tag="award">
+                        <span class="news-item-row">
+                          <span class="news-item-main">
+                            <span class="news-tag news-tag--award">Award</span>
+                            <span class="news-item-copy">
+                              Won Second prize in the Scientific Research Conference
+                              for Undergraduates, FIT, UET-VNU.
+                            </span>
+                          </span>
+                          <span class="news-date">Jan 2020</span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
                 </article>
               </div>
             </section>
-          </div>
-        </section>
 
-        <section class="section about-grid" id="dich-vu">
-          <article class="info-card reveal">
-            <p class="mini-label">Positioning</p>
-            <h2>Không chỉ “có website”, mà là có một sự hiện diện đủ khác biệt.</h2>
-            <p>
-              Bố cục được thiết kế để vừa sang trọng vừa có chiều sâu, phù hợp với những
-              người muốn thể hiện chất riêng một cách tinh tế thay vì phô trương.
-            </p>
-          </article>
-
-          <article class="info-card reveal">
-            <p class="mini-label">What Makes It Work</p>
-            <ul class="detail-list">
-              <li>Header nổi, viền ánh kim và hiệu ứng kính mờ để tăng độ cao cấp.</li>
-              <li>Hero dạng dashboard giúp bạn giới thiệu bản thân và dự án cùng lúc.</li>
-              <li>Nhịp typography rõ ràng để người xem đọc nhanh nhưng vẫn thấy tinh tế.</li>
-            </ul>
-          </article>
-
-          <article class="info-card reveal">
-            <p class="mini-label">Built For</p>
-            <ul class="detail-list">
-              <li>Developer và freelancer muốn portfolio hiện đại hơn.</li>
-              <li>Consultant, speaker, coach hoặc creator cần bio site giàu bản sắc.</li>
-              <li>Startup cá nhân muốn có landing page sạch, rõ và đáng tin.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="section journey" id="hanh-trinh">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Experience Flow</p>
-            <h2>Hành trình nội dung được sắp theo đúng cách người xem ra quyết định.</h2>
-            <p>
-              Thay vì nhồi nhiều chữ, trang web dẫn mắt theo trình tự: nhận diện bạn là ai,
-              bạn làm gì tốt, bạn đã làm được gì và phải liên hệ với bạn thế nào.
-            </p>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-card reveal">
-              <span class="timeline-year">01</span>
-              <h3>Ấn tượng đầu tiên</h3>
-              <p>
-                Tiêu đề lớn, câu định vị rõ và nhóm CTA giúp người xem hiểu ngay bạn đang
-                mang đến giá trị gì.
-              </p>
-            </article>
-
-            <article class="timeline-card reveal">
-              <span class="timeline-year">02</span>
-              <h3>Chứng minh năng lực</h3>
-              <p>
-                Khu dự án nổi bật được trình bày như các case study mini, đủ để tăng sự tin
-                tưởng mà không làm trang quá nặng.
-              </p>
-            </article>
-
-            <article class="timeline-card reveal">
-              <span class="timeline-year">03</span>
-              <h3>Chuyển đổi nhẹ nhàng</h3>
-              <p>
-                Phần liên hệ giữ tông sang trọng nhưng rõ hành động tiếp theo, phù hợp cho
-                cả khách hàng lẫn nhà tuyển dụng.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section contact-section" id="lien-he">
-          <div class="contact-card reveal">
-            <div class="contact-copy">
-              <p class="eyebrow">Contact</p>
-              <h2>Sẵn sàng biến hồ sơ cá nhân của bạn thành một trải nghiệm đáng nhớ.</h2>
-              <p>
-                Hiện tại mình để tên, email và link mạng xã hội ở dạng mẫu để bạn thay rất
-                nhanh. Phần giao diện và bố cục đã sẵn sàng để dùng làm nền cho website cá
-                nhân thật.
-              </p>
-            </div>
-
-            <div class="contact-actions">
-              <a class="button button-primary" href="mailto:your@email.com">Gửi email</a>
-              <a class="button button-secondary" href="#gioi-thieu">Quay lại đầu trang</a>
-
-              <div class="contact-list">
+            <section class="content-group reveal home-section">
+              <div class="group-heading">
                 <div>
-                  <span>Email</span>
-                  <strong>your@email.com</strong>
-                </div>
-                <div>
-                  <span>LinkedIn</span>
-                  <strong>linkedin.com/in/yourname</strong>
-                </div>
-                <div>
-                  <span>GitHub</span>
-                  <strong>github.com/yourname</strong>
+                  <h2>Education</h2>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      </main>
 
-      <footer class="site-footer">
-        <p><span id="year"></span> Phuong Le. Crafted for presence, clarity and confidence.</p>
-      </footer>
+              <div class="home-panel-grid">
+                <article class="home-panel">
+                  <h3>Singapore Management University</h3>
+                  <p>
+                    Doctor of Philosophy - PhD, Computer Science.
+                  </p>
+                  <ul class="home-panel-list">
+                    <li>
+                      <strong>Period:</strong> Aug 2023 - Present.
+                    </li>
+                    <li>
+                      <strong>Institution:</strong> Singapore Management
+                      University.
+                    </li>
+                    <li>
+                      <strong>School:</strong> School of Computing and Information
+                      Systems.
+                    </li>
+                    <li>
+                      <strong>Location:</strong> Singapore.
+                    </li>
+                  </ul>
+                </article>
+
+                <article class="home-panel">
+                  <h3>Vietnam National University, Hanoi</h3>
+                  <p>
+                    Bachelor's degree, Computer Science.
+                  </p>
+                  <ul class="home-panel-list">
+                    <li>
+                      <strong>Period:</strong> 2018 - 2022.
+                    </li>
+                    <li>
+                      <strong>Institution:</strong> Vietnam National University,
+                      Hanoi.
+                    </li>
+                    <li>
+                      <strong>School:</strong> University of Engineering and Technology.
+                    </li>
+                    <li>
+                      <strong>Degree:</strong> Bachelor's degree in Computer
+                      Science.
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <!-- <section class="content-group reveal home-section">
+              <div class="group-heading">
+                <div>
+                  <h2>Experience</h2>
+                  <p class="group-copy">
+                    A brief overview of my academic, teaching, and industry
+                    experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="home-panel-grid">
+                <article class="home-panel">
+                  <h3>Academic &amp; Research Roles</h3>
+                  <p>
+                    My recent experience has focused on research, teaching, and
+                    academic work in computer science and AI.
+                  </p>
+                  <ul class="experience-list">
+                    <li>
+                      <strong class="experience-title">AI Researcher</strong>
+                      <span class="experience-meta">Singapore Management University · Full-time</span>
+                      <span class="experience-meta">Aug 2023 - Present · 2 yrs 9 mos</span>
+                      <span class="experience-meta">Singapore · On-site</span>
+                    </li>
+                    <li>
+                      <strong class="experience-title">Teaching Assistant</strong>
+                      <span class="experience-meta">Vietnam National University, Hanoi · Full-time</span>
+                      <span class="experience-meta">Aug 2022 - Aug 2023 · 1 yr 1 mo</span>
+                      <span class="experience-meta">Hanoi, Hanoi, Vietnam · On-site</span>
+                    </li>
+                  </ul>
+                </article>
+
+                <article class="home-panel">
+                  <h3>Industry &amp; Technical Roles</h3>
+                  <p>
+                    Earlier roles built my foundation in data science, software
+                    development, and applied machine learning.
+                  </p>
+                  <ul class="experience-list">
+                    <li>
+                      <strong class="experience-title">Data Scientist</strong>
+                      <span class="experience-meta">VNPT IT · Part-time</span>
+                      <span class="experience-meta">Nov 2021 - Jun 2023 · 1 yr 8 mos</span>
+                      <span class="experience-meta">Hanoi, Hanoi, Vietnam · On-site</span>
+                    </li>
+                    <li>
+                      <strong class="experience-title">Data Science Intern</strong>
+                      <span class="experience-meta">DAGORAS TECHNOLOGY AND COMMUNICATIONS JSC · Part-time</span>
+                      <span class="experience-meta">Jun 2021 - Oct 2021 · 5 mos</span>
+                      <span class="experience-meta">On-site</span>
+                    </li>
+                    <li>
+                      <strong class="experience-title">React Developer</strong>
+                      <span class="experience-meta">Sao Khue · Part-time</span>
+                      <span class="experience-meta">Sep 2020 - Feb 2021 · 6 mos</span>
+                      <span class="experience-meta">Hanoi, Hanoi, Vietnam</span>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </section> -->
+
+            <section class="content-group reveal home-section">
+              <div class="group-heading">
+                <div>
+                  <h2>Quick links</h2>
+                </div>
+              </div>
+
+              <div class="quick-link-grid">
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Recent updates</span>
+                  <h3>News</h3>
+                  <p>Recent research updates, activities, upcoming plans, and awards.</p>
+                  <a class="quick-link-action" href="news.html">Open news</a>
+                </article>
+
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Research output</span>
+                  <h3>Publications</h3>
+                  <p>Selected papers and research outputs across journals, conferences, and preprints.</p>
+                  <a class="quick-link-action" href="publications.html">View publications</a>
+                </article>
+
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Teaching</span>
+                  <h3>Teaching</h3>
+                  <p>Courses, courseware support, classroom activities, and mentoring experience.</p>
+                  <a class="quick-link-action" href="teaching.html">View teaching</a>
+                </article>
+
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Recognition</span>
+                  <h3>Award</h3>
+                  <p>Scholarships, competition prizes, and academic recognition across stages.</p>
+                  <a class="quick-link-action" href="award.html">See awards</a>
+                </article>
+
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Profile</span>
+                  <h3>About</h3>
+                  <p>Academic background, research direction, and a concise overview of my journey.</p>
+                  <a class="quick-link-action" href="about.html">Read about me</a>
+                </article>
+
+                <article class="home-panel quick-link-card">
+                  <span class="quick-link-kicker">Get in touch</span>
+                  <h3>Contact</h3>
+                  <p>Email, academic profiles, and a direct message form for research or collaboration.</p>
+                  <a class="quick-link-action" href="contact.html">Open contact</a>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
     </div>
   </body>
 </html>
