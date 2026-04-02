@@ -67,10 +67,6 @@ const getPrimaryScrollContainer = () => {
     return null;
   }
 
-  if (getCurrentPage() === "home") {
-    return getContentColumn();
-  }
-
   return getBoardLayout();
 };
 
