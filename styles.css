@@ -39,10 +39,10 @@ html {
   --sidebar-top: rgba(251, 248, 242, 0.98);
   --sidebar-bottom: rgba(245, 239, 230, 0.96);
   --card: #fffdfa;
-  --card-text: #2b302f;
-  --card-muted: #756d63;
-  --text: #24303a;
-  --muted: #6b717a;
+  --card-text: #21282d;
+  --card-muted: #615a53;
+  --text: #1c2731;
+  --muted: #505a64;
   --accent: #9b8466;
   --accent-strong: #6d5a43;
   --line: rgba(58, 57, 52, 0.12);
@@ -548,19 +548,23 @@ body[data-page="home"] .fact-card strong {
 }
 
 .inline-link {
-  color: var(--accent-strong);
+  color: #f0e2cc;
+  font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: rgba(229, 215, 196, 0.34);
-  text-underline-offset: 0.16em;
+  text-decoration-color: rgba(229, 215, 196, 0.72);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
   transition:
     color 180ms ease,
-    text-decoration-color 180ms ease;
+    text-decoration-color 180ms ease,
+    text-decoration-thickness 180ms ease;
 }
 
 .inline-link:hover,
 .inline-link:focus-visible {
-  color: #fff3da;
-  text-decoration-color: rgba(255, 243, 218, 0.62);
+  color: #fff7ea;
+  text-decoration-color: rgba(255, 243, 218, 0.96);
+  text-decoration-thickness: 2px;
 }
 
 .sidebar-block > .eyebrow {
@@ -998,6 +1002,10 @@ body[data-page="home"] .home-panel-list--scroll {
 }
 
 .news-item-main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
   min-width: 0;
 }
 
@@ -1014,7 +1022,8 @@ body[data-page="home"] .home-panel-list--scroll {
 }
 
 .news-item-copy {
-  display: inline;
+  display: block;
+  min-width: 0;
 }
 
 .news-scroll-wrap {
@@ -1378,7 +1387,7 @@ body[data-page="contact"] .contact-list li:last-child::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
+  margin-right: 0;
   padding: 0.18rem 0.45rem;
   min-width: 5.8rem;
   border-radius: 999px;
@@ -2688,7 +2697,7 @@ body[data-page="contact"] .contact-form-status {
 }
 
 :root[data-theme="light"] .site-nav a {
-  color: rgba(28, 37, 53, 0.78);
+  color: rgba(28, 37, 53, 0.88);
 }
 
 :root[data-theme="light"] .site-nav a:hover,
@@ -2760,9 +2769,15 @@ body[data-page="contact"] .contact-form-status {
 :root[data-theme="light"] .eyebrow,
 :root[data-theme="light"] .status-pill,
 :root[data-theme="light"] .home-signal-card span,
+:root[data-theme="light"] .quick-link-kicker,
 :root[data-theme="light"] body[data-page="contact"] .contact-method-label,
 :root[data-theme="light"] body[data-page="contact"] .contact-field span {
-  color: rgba(101, 98, 91, 0.84);
+  color: rgba(86, 82, 75, 0.94);
+}
+
+:root[data-theme="light"] .brand-role,
+:root[data-theme="light"] .theme-toggle-label {
+  color: #45515b;
 }
 
 :root[data-theme="light"] .social-link,
@@ -2772,7 +2787,7 @@ body[data-page="contact"] .contact-form-status {
 :root[data-theme="light"] body[data-page="publications"] .publication-action,
 :root[data-theme="light"] body[data-page="contact"] .contact-submit,
 :root[data-theme="light"] body[data-page="contact"] .contact-method {
-  color: #3a3f45;
+  color: #2f363d;
 }
 
 :root[data-theme="light"] .sidebar-list li::before,
@@ -2786,6 +2801,10 @@ body[data-page="contact"] .contact-form-status {
   color: rgba(155, 132, 100, 0.72);
 }
 
+:root[data-theme="light"] .quote-card footer {
+  color: rgba(86, 82, 75, 0.9);
+}
+
 :root[data-theme="light"] .news-date,
 :root[data-theme="light"] .experience-meta,
 :root[data-theme="light"] .group-copy,
@@ -2793,17 +2812,17 @@ body[data-page="contact"] .contact-form-status {
 :root[data-theme="light"] body[data-page="publications"] .publication-meta,
 :root[data-theme="light"] body[data-page="publications"] .publication-note,
 :root[data-theme="light"] body[data-page="about"] .about-education-list span {
-  color: rgba(95, 98, 102, 0.84);
+  color: rgba(72, 78, 84, 0.96);
 }
 
 :root[data-theme="light"] .news-item-copy {
-  color: #32383c;
+  color: #242c33;
 }
 
 :root[data-theme="light"] .news-filter-button {
   border-color: rgba(91, 86, 75, 0.12);
   background: rgba(255, 252, 247, 0.86);
-  color: #6d726f;
+  color: #535b5b;
   box-shadow: none;
 }
 
@@ -2889,28 +2908,40 @@ body[data-page="contact"] .contact-form-status {
 :root[data-theme="light"] body[data-page="about"] .about-statement h4,
 :root[data-theme="light"] body[data-page="about"] .about-education-list strong,
 :root[data-theme="light"] body[data-page="contact"] .contact-method strong {
-  color: #2b302f;
+  color: #20272d;
 }
 
 :root[data-theme="light"] body[data-page="publications"] .publication-authors {
-  color: rgba(69, 71, 77, 0.76);
+  color: rgba(61, 67, 73, 0.9);
 }
 
 :root[data-theme="light"] body[data-page="publications"] .publication-year,
 :root[data-theme="light"] body[data-page="award"] .award-year {
   border-color: rgba(91, 86, 75, 0.14);
   background: rgba(123, 114, 94, 0.07);
-  color: #5a5f67;
+  color: #484f57;
 }
 
 :root[data-theme="light"] body[data-page="contact"] .contact-field input::placeholder,
 :root[data-theme="light"] body[data-page="contact"] .contact-field textarea::placeholder {
-  color: rgba(122, 119, 111, 0.62);
+  color: rgba(104, 99, 92, 0.78);
+}
+
+:root[data-theme="light"] body[data-page="contact"] .contact-field input,
+:root[data-theme="light"] body[data-page="contact"] .contact-field textarea {
+  color: #232a31;
+  caret-color: #232a31;
+}
+
+:root[data-theme="light"] .inline-link {
+  color: #7a5b37;
+  text-decoration-color: rgba(122, 91, 55, 0.56);
 }
 
 :root[data-theme="light"] .inline-link:hover,
 :root[data-theme="light"] .inline-link:focus-visible {
-  color: #6f5b43;
+  color: #563d20;
+  text-decoration-color: rgba(86, 61, 32, 0.84);
 }
 
 :root[data-theme="light"] .news-scroll-wrap::after {
